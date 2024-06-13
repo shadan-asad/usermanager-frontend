@@ -1,0 +1,19 @@
+<div mat-dialog-title>Delete User</div>
+<div mat-dialog-content class="content">
+  <div><label>Are you sure ? </label></div>
+</div>
+
+<div mat-dialog-actions align="center" class="btn-row">
+  <button mat-raised-button class="button" type="button" (click)="close()">
+    Cancel
+  </button>
+  <button
+    mat-raised-button
+    class="button"
+    color="warn"
+    type="button"
+    (click)="deleteUser()"
+  >
+    Delete
+  </button>
+</div>

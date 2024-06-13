@@ -1,0 +1,112 @@
+{
+  "user": [
+    {
+      "name": "Johnny",
+      "email": "johny@gm.co",
+      "phone": 9898723462,
+      "dob": "1997-07-16",
+      "gender": "Female",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "terms": true,
+      "id": "eb4f"
+    },
+    {
+      "name": "Mich",
+      "email": "slf@gl.co",
+      "phone": 1231231239,
+      "dob": "2014-12-30",
+      "gender": "Male",
+      "city": "sdf",
+      "state": "fdd",
+      "country": "India",
+      "terms": true,
+      "id": "0059"
+    },
+    {
+      "id": "3ce6",
+      "name": "johnny",
+      "email": "john@gl.co",
+      "phone": 1231231230,
+      "dob": "2014-12-24",
+      "gender": "Male",
+      "city": "sdf",
+      "state": "lskd",
+      "country": "India",
+      "terms": true
+    },
+    {
+      "id": "4953",
+      "name": "Jane",
+      "email": "jane@gm.co",
+      "phone": 1231231230,
+      "dob": "2014-12-30",
+      "gender": "Male",
+      "city": "Hyd",
+      "state": "Tel",
+      "country": "India",
+      "terms": true
+    },
+    {
+      "id": "80c7",
+      "name": "michael",
+      "email": "mich@gm.co",
+      "phone": 2342341329,
+      "dob": "2014-12-23",
+      "gender": "Male",
+      "city": "slkd",
+      "state": "sljd",
+      "country": "India",
+      "terms": true
+    },
+    {
+      "id": "8175",
+      "name": "Jake",
+      "email": "jake@gm.com",
+      "phone": 3434534545,
+      "dob": "2014-12-23",
+      "gender": "Male",
+      "city": "Hyd",
+      "state": "Tel",
+      "country": "India",
+      "terms": true
+    },
+    {
+      "id": "ef66",
+      "name": "John",
+      "email": "john@gm.co",
+      "phone": 2423234234,
+      "dob": "2014-12-23",
+      "gender": "Male",
+      "city": "sdfssfds",
+      "state": "sdfs",
+      "country": "India",
+      "terms": true
+    },
+    {
+      "id": "e30c",
+      "name": "John",
+      "email": "john@gm.oc",
+      "phone": 9823234234,
+      "dob": "2014-12-23",
+      "gender": "Male",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "terms": true
+    },
+    {
+      "id": "474c",
+      "name": "John",
+      "email": "john@gm.oc",
+      "phone": 9823234234,
+      "dob": "2014-12-23",
+      "gender": "Male",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "terms": true
+    }
+  ]
+}

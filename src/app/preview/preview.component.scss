@@ -1,0 +1,35 @@
+.container {
+  text-align: center;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  margin-left: 36%;
+}
+
+.left {
+  text-align: left;
+  margin-left: 5rem;
+}
+
+.right {
+  text-align: left;
+  margin-left: 1.5rem;
+}
+
+mat-list-item {
+  margin-bottom: -10px;
+}
+
+.btn-row {
+  margin-top: 20px;
+  button {
+    width: 10rem;
+    margin: 10px 10px 0 0;
+  }
+}

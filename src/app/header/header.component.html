@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+  <img class="logo" [src]="logoPath" alt="My Logo" routerLink="/" />
+  <span class="title"> {{ title }}</span>
+  <span class="spacer"></span>
+  <div *ngIf="router.url === '/'">
+    <button mat-raised-button routerLink="/view" routerLinkActive="active">
+      View Users
+    </button>
+    <button mat-raised-button routerLink="/dashboard" routerLinkActive="active">
+      Dashboard
+    </button>
+  </div>
+
+  <div *ngIf="router.url === '/view'">
+    <button mat-raised-button routerLink="/" routerLinkActive="active">
+      Home
+    </button>
+    <button mat-raised-button routerLink="/dashboard" routerLinkActive="active">
+      Dashboard
+    </button>
+  </div>
+
+  <div *ngIf="router.url === '/dashboard'">
+    <button mat-raised-button routerLink="/" routerLinkActive="active">
+      Home
+    </button>
+    <button mat-raised-button routerLink="/view" routerLinkActive="active">
+      View Users
+    </button>
+  </div>
+
+</mat-toolbar>

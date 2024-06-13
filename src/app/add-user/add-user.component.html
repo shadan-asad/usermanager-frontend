@@ -1,0 +1,221 @@
+<!-- <div class="container">
+  <div><h2>Add User</h2></div>
+  <form [formGroup]="addUserForm" (ngSubmit)="addUser()">
+    <div class="content">
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          placeholder="Name"
+          formControlName="name"
+          required
+          maxlength="30"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input matInput type="number" placeholder="Age" formControlName="age" />
+      </mat-form-field>
+
+      <div>
+        <label>Gender: </label>
+        <mat-radio-group formControlName="gender">
+          <mat-radio-button value="Male" color="primary">Male</mat-radio-button>
+          <mat-radio-button value="Female">Female</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+    <div *ngIf="errorMsg" class="error">
+      <h4>{{ errorMsg }}</h4>
+    </div>
+    <div align="center" class="btn-row">
+      <button mat-raised-button class="button" color="primary" type="submit">
+        Add
+      </button>
+    </div>
+  </form>
+</div> -->
+
+<form class="container" [formGroup]="addUserForm" (ngSubmit)="addUser()">
+  <h2>Add User</h2>
+  <div class="row">
+    <div class="left">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          placeholder="Name"
+          formControlName="name"
+          maxlength="30"
+        />
+        <mat-error
+          *ngIf="
+            addUserForm.controls.name.touched &&
+            addUserForm.controls.name.invalid
+          "
+        >
+          Please enter a valid name.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+        <mat-error
+          *ngIf="
+            addUserForm.controls.gender.touched &&
+            addUserForm.controls.email.invalid
+          "
+        >
+          Please enter a valid email.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Phone Number"
+          formControlName="phone"
+        />
+        <mat-error
+          *ngIf="
+            addUserForm.controls.gender.touched &&
+            addUserForm.controls.phone.invalid
+          "
+        >
+          Phone number should be 10 digits
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Date of birth</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [min]="minDate"
+          [max]="maxDate"
+          formControlName="dob"
+          placeholder="MM/DD/YYYY"
+        />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error
+          *ngIf="
+            addUserForm.controls.gender.touched &&
+            addUserForm.controls.dob.invalid
+          "
+        >
+          Please select a valid DOB.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="right">
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input
+          matInput
+          placeholder="City"
+          formControlName="city"
+          required
+          maxlength="30"
+        />
+        <mat-error
+          *ngIf="
+            addUserForm.controls.gender.touched &&
+            addUserForm.controls.city.invalid
+          "
+        >
+          Please enter your city
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="State" formControlName="state" />
+        <mat-error
+          *ngIf="
+            addUserForm.controls.gender.touched &&
+            addUserForm.controls.state.invalid
+          "
+        >
+          Please enter your state
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Country</mat-label>
+        <mat-select formControlName="country">
+          <mat-option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </mat-option>
+        </mat-select>
+        <mat-error
+          *ngIf="
+            addUserForm.controls.gender.touched &&
+            addUserForm.controls.country.invalid
+          "
+        >
+          Please select your country.
+        </mat-error>
+      </mat-form-field>
+
+      <div class="gender">
+        <mat-radio-group formControlName="gender">
+          <label>Gender: </label>
+          <mat-radio-button value="Male" color="primary">Male</mat-radio-button>
+          <mat-radio-button value="Female">Female</mat-radio-button>
+        </mat-radio-group>
+        <mat-error
+          *ngIf="
+            addUserForm.controls.gender.touched &&
+            addUserForm.controls.gender.invalid
+          "
+        >
+          Please select a gender.
+        </mat-error>
+      </div>
+    </div>
+  </div>
+  <mat-checkbox color="primary" formControlName="terms">
+    I accept all terms & conditions
+  </mat-checkbox>
+  <mat-error
+    *ngIf="
+      addUserForm.controls.terms.touched && addUserForm.controls.terms.invalid
+    "
+  >
+    Please accept the terms & conditions to proceed.
+  </mat-error>
+  <div class="btn-row">
+    <button
+      mat-raised-button
+      class="button"
+      type="button"
+      (click)="clearForm()"
+    >
+      Clear
+    </button>
+    <button mat-raised-button class="button" color="primary" type="submit">
+      Review
+    </button>
+  </div>
+</form>

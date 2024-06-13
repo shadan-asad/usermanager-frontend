@@ -1,0 +1,69 @@
+.container {
+  text-align: center;
+  margin-top: 18px;
+}
+
+// .button {
+//   margin: 4px;
+//   margin-top: 30px;
+//   width: 190px;
+//   height: 40px;
+// }
+
+// .content {
+//   mat-form-field {
+//     width: 100%;
+//   }
+// }
+
+.btn-row {
+  button {
+    width: 10rem;
+    margin: 10px 10px 0 0;
+  }
+}
+
+// .error {
+//   margin-left: 90px;
+//   color: red;
+// }
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.left {
+  text-align: right;
+  margin-right: 1.5rem;
+}
+
+.right {
+  text-align: left;
+  margin-left: 1.5rem;
+}
+
+mat-form-field {
+  display: block;
+  width: 100%;
+  font-size: small;
+}
+
+mat-label {
+  font-size: small;
+}
+
+mat-radio-group.ng-touched.ng-invalid {
+  border: solid 0.5px red;
+  padding: 12px 12px 24px 12px;
+  border-radius: 5px;
+}
+
+.gender {
+  mat-error {
+    margin-top: 10px;
+    margin-left: 13px;
+    font-size: 12px;
+  }
+}
