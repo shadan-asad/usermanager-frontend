@@ -6,7 +6,7 @@ RUN npm cache clean --force
 RUN npm install
 RUN npm install
 COPY . .
-RUN npm run build --verbose
+RUN npm run build
 
 # Production stage
 FROM nginx:alpine
