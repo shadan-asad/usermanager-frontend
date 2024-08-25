@@ -28,17 +28,17 @@ export class UsersService {
 
   getUserDetails(id: string): Observable<User> {
     return this.http
-      .get<User>(`${this.url}/${id}`)
+      .get<User>(`${this.url}/${id}`, { withCredentials: true })
       .pipe(catchError(this.handleError));
   }
 
   getAllUsers(): Observable<User[]> {
     return this.http
-      .get<User[]>(`${this.url}/allUsers`)
+      .get<User[]>(`${this.url}/allUsers`, { withCredentials: true })
       .pipe(catchError(this.handleError));
     
   }
-
+//http://localhost:8080/login/oauth2/code/google //google cloud - authorized redirect
   editUser(id: string, data: User): Observable<User> {
     console.log("in edit ser: ",id, data)
     data.name = data.name?.trim();
